@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="MyEditText">
+
+        <attr name="left_text" format="string"/>
+        <attr name="edit_hint" format="string"/>
+        <attr name="show_more_icon" format="boolean"/>
+    </declare-styleable>
+</resources>
