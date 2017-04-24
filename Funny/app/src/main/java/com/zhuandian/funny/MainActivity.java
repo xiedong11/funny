@@ -17,6 +17,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.jauker.widget.BadgeView;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -24,11 +26,27 @@ public class MainActivity extends AppCompatActivity {
 
 
     private TextView mTextView;
+    private TextView message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+//        看一下badgeview中常用的方法：
+//        1. setTargetView(View) --> 设置哪个控件显示数字提醒，参数就是一个view对象
+//        2. setBadgeCount(int) --> 设置提醒的数字
+//        3. setBadgeGravity(Gravity) --> 设置badgeview的显示位置
+//        4. setBackgroundColor() --> 设置badgeview的背景色，当然还可以设置背景图片
+//        5. setBackgroundResource() --> 设置背景图片
+//        6. setTypeface() --> 设置显示的字体
+//        7. setShadowLayer() --> 设置字体的阴影
+        message = (TextView) findViewById(R.id.message);
+        BadgeView badgeView = new com.jauker.widget.BadgeView(this);
+        badgeView.setTargetView(message);
+        badgeView.setBadgeCount(3);
+
 
         mTextView = new TextView(this);
         addContentView(mTextView,new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));

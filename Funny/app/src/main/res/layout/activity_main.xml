@@ -27,4 +27,23 @@
         xd:show_more_icon="true"
         xd:edit_hint="hahah"
         />
+
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/my_edit_text"
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="消息"
+        android:layout_centerHorizontal="true"
+        />
+
+    <com.jauker.widget.BadgeView
+        android:id="@+id/message_unread_count_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
 </RelativeLayout>
