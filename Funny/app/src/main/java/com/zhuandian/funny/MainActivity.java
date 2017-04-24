@@ -8,9 +8,12 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.BackgroundColorSpan;
+import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -75,12 +78,13 @@ public class MainActivity extends AppCompatActivity {
         words.setSpan(spanBg,5,7,Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         //设置字体大小
-        AbsoluteSizeSpan spanSize = new AbsoluteSizeSpan(14);
+        AbsoluteSizeSpan spanSize = new AbsoluteSizeSpan(44);
         words.setSpan(spanSize,8,10,Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
-
+        words.setSpan(new MyTextSpan(),1,16,Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         mTextView.setText(words);
+        mTextView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
 
