@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mTextView;
     private TextView message;
+    private BadgeView messageCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         BadgeView badgeView = new com.jauker.widget.BadgeView(this);
         badgeView.setTargetView(message);
         badgeView.setBadgeCount(3);
+
 
 
         mTextView = new TextView(this);
