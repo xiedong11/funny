@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         mTextView.setText(words);
         mTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
-        
+
     }
 
 
